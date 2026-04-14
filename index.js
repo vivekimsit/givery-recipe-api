@@ -15,7 +15,9 @@ function hasRequiredFields(body) {
 }
 
 app.get("/", function rootHandler(req, res) {
-	res.send("ok");
+	res.status(200).json({
+		message: "ok",
+	});
 });
 
 app.post("/recipes", function createRecipeHandler(req, res) {
